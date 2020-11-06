@@ -1,0 +1,17 @@
+<h2>Edit product</h2>
+<h3>ID</h3>
+<div>{{ product.id }}</div>
+<h3>Title</h3>
+<input type="text" value="{{ product.title }}"
+    (blur)="setValues('title', $event.target['value'])">
+<h3>Link to image</h3>
+<input type="text" value="{{ product.imageLink }}"
+    (blur)="setValues('imageLink', $event.target['value'])">
+<h3>Product feedback</h3>
+<input type="text" value="{{ product.feedback }}"
+    (blur)="setValues('feedback', $event.target['value'])">
+<br>
+<hr>
+<br>
+<button (click)="updateProduct(product)">Save changes</button> | 
+<button (click)="deleteProduct(product)">Remove product</button>

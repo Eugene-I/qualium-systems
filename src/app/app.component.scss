@@ -1,0 +1,9 @@
+nav{
+    a{
+        text-decoration: none;
+        &:hover,
+        &.active {
+            color: #f0f;
+        }
+    }
+}

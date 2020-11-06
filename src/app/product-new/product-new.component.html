@@ -1,0 +1,14 @@
+<h2>Add new product</h2>
+<form [formGroup]="this.svc.form" (ngSubmit)="onSubmit()">
+    <input type="hidden" placeholder="key" formControlName="key">
+    <label for="imageLink">Image link</label><br>
+    <input type="text" id="imageLink" placeholder="Image link" formControlName="imageLink">
+    <hr>
+    <label for="title">Product title</label><br>
+    <input type="text" id="title" placeholder="Product title" formControlName="title">
+    <hr>
+    <label for="feedback">Product feedback</label><br>
+    <input type="text" id="feedback" placeholder="Product feedback" formControlName="feedback">
+    <hr>
+    <button>Add</button>
+</form>

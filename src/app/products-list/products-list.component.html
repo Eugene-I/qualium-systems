@@ -1,0 +1,26 @@
+<h2>Products list</h2>
+<strong>
+    I'm
+    <select>
+        <option *ngFor="let role of roles">{{ role.title }}</option>
+    </select>
+</strong>
+<ul>
+    <ng-container *ngIf="svc.products.length !== 0; then productItem else empty"></ng-container>
+</ul>
+<ng-template #productItem>
+    <li class="product-item" *ngFor="let product of svc.products">
+        <div class="image-holder">
+            <img src="{{ product.imageLink }}" alt="">
+        </div>
+        <h3>{{ product.title }}</h3>
+        <p><em>{{ product.feedback }}</em></p>
+        <button (click)="onSelect(product)">Edit</button>
+        <!--div *ngIf="role.id !== 1">
+        </div-->
+    </li>
+</ng-template>
+
+<ng-template #empty>
+    <li>No products yet</li>
+</ng-template>
